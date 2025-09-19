@@ -11,5 +11,5 @@ steps:
 - script: echo "Pipeline is running!"
   displayName: "Hello step"
 
-- script: echo "Secret (should be masked): $(DbPassword)"
+- script: echo "Secret = $(ConnStr))"
   displayName: "Print secret"
