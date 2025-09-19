@@ -1,0 +1,15 @@
+trigger:
+- main
+
+variables:
+- group: kv-secrets-vikram
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- script: echo "Pipeline is running!"
+  displayName: "Hello step"
+
+- script: echo "Secret (should be masked): $(DbPassword)"
+  displayName: "Print secret"
